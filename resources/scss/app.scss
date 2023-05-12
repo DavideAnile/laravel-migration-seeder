@@ -1,1 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+.cancelled{
+    text-decoration: line-through;
+    opacity: .5;
+}

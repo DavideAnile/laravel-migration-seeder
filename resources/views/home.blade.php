@@ -21,7 +21,7 @@
     <tbody>
         @foreach ($trains as $train)
             
-        <tr>
+        <tr class="{{$train->is_deleted == true ? 'cancelled' : ''}}">
             <td>{{$train->azienda}}</td>
             <td>{{$train->departure_station}}</td>
             <td>{{$train->arrival_station}}</td>
@@ -31,6 +31,8 @@
             <td class="text-center">{{$train->carriages_number}}</td>
             <td class="text-center">{{$train->in_time == null ? 'Nessun ritardo' : $train->in_time}}' </td>
             <td class="text-center">{{$train->is_deleted == false ? 'NO' : 'SI'}}</td>
+
+            
             
         </tr>
 
